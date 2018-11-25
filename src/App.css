@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.map-info-container {
+  overflow: visible !important;
+}
+
+.map-info-marker {
+  position: absolute;
+  font-family: 'Helvetica';
+  left: -37px;
+  top: -25px;
+  width: 70px;
+  height: 20px;
+  border-radius: 3px;
+  line-height: 22px;
+  background-color: white;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.07);
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid gray;
+  z-index: 1;
+}
+.map-info-marker:before,
+.map-info-marker:after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+}
+
+.map-info-marker:after {
+  left: 31px;
+  top: 19px;
+  border-width: 5px;
+  border-color: white transparent transparent;
+}
+
+.map-info-marker:before {
+  left: 30px;
+  top: 20px;
+  border-width: 6px;
+  border-color: gray transparent transparent;
+}
+
+.map-info-marker.visited:hover {
+  background-color: #7b8d93;
+  color: #fff;
+  border-color: #5b6a6f;
+}
+
+.map-info-marker.visited:hover:after {
+  border-color: #7b8d93 transparent transparent;
+}
+
+.map-info-marker.visited:hover:before {
+  border-color: #5b6a6f transparent transparent;
+}
+
+.map-info-marker:hover {
+  background-color: #f2f2f2;
+  color: black;
+  border-color: gray;
+  z-index: 3;
+}
+
+.map-info-marker:hover:after {
+  border-color: #f2f2f2 transparent transparent;
+}
+
+.map-info-marker:hover:before {
+  border-color: gray transparent transparent;
+}
